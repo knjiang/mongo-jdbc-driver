@@ -42,10 +42,11 @@ elif [ -e /opt/homebrew/bin/go ]; then
 elif [ -e /home/linuxbrew/.linuxbrew/bin/go ]; then
   GOBINDIR=/home/linuxbrew/.linuxbrew/bin
 else #local testing
-  GOBINDIR=/usr/bin
+  GOBINDIR=/usr/local/go/bin
 fi
 
-GO="$GOBINDIR/go"
+GO="/usr/local/go/bin/go"
+echo $(/usr/local/go/bin/go version)
 
 PATH=$GOBINDIR:$PATH
 

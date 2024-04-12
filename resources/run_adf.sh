@@ -50,6 +50,8 @@ GO="$GOBINDIR/go"
 
 echo $(which go)
 echo "HELLO"
+echo $(/usr/local/bin/go version)
+echo $(/usr/local/go/bin/go version)
 echo $(go version)
 echo $(go env GOENV)
 echo $GOBINDIR

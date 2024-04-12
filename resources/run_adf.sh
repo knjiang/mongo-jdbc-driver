@@ -45,7 +45,16 @@ else #local testing
   GOBINDIR=/usr/bin
 fi
 
+
 GO="$GOBINDIR/go"
+
+echo $(which go)
+echo "HELLO"
+echo $(go version)
+echo $(go env GOENV)
+echo $GOBINDIR
+echo $GOROOT
+echo "GOODBYE"
 
 PATH=$GOBINDIR:$PATH
 

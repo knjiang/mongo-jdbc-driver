@@ -28,21 +28,27 @@ GO_VERSION="go1.22"
 if [ -d "/opt/golang/$GO_VERSION" ]; then
   GOROOT="/opt/golang/$GO_VERSION"
   GOBINDIR="$GOROOT"/bin
+  echo "went here 1"
 elif [ -d "C:\\golang\\$GO_VERSION" ]; then
   GOROOT="C:\\golang\\$GO_VERSION"
   GOBINDIR="$GOROOT"\\bin
   export GOCACHE=$(cygpath -m $HOME/gocache)
   export GOPATH=$(cygpath -m $HOME/go)
+  echo "went here 2"
 # local testing macos
 elif [ -e /usr/local/bin/go ]; then
   GOBINDIR=/usr/local/bin
+  echo "went here 3"
 elif [ -e /opt/homebrew/bin/go ]; then
   GOBINDIR=/opt/homebrew/bin
+  echo "went here 4"
 # local testing ubuntu
 elif [ -e /home/linuxbrew/.linuxbrew/bin/go ]; then
   GOBINDIR=/home/linuxbrew/.linuxbrew/bin
+  echo "went here 5"
 else #local testing
   GOBINDIR=/usr/local/go/bin
+  echo "went here 6"
 fi
 
 GO="/usr/local/go/bin/go"

@@ -58,7 +58,4 @@ echo "GOODBYE"
 
 PATH=$GOBINDIR:$PATH
 
-
-cd $LOCAL_MONGOHOUSE_DIR
-
 echo $($GO version)
